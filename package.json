@@ -1,0 +1,17 @@
+{
+  "name": "nodevember",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Aditi",
+  "type": "module",
+  "main": "express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "express": "^5.1.0",
+    "figlet": "^1.9.3"
+  }
+}
