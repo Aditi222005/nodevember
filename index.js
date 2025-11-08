@@ -2,7 +2,9 @@ import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import authRoutes from './routes/auth.routes.js';
-
+import bookRoutes from './routes/book.route.js';
+import orderRoutes from './routes/order.routes.js';
+import aiRoutes from './routes/ai.routes.js';
 dotenv.config(); // To access environment variables
 connectDB();
 
@@ -12,7 +14,9 @@ app.use(express.json()); // To parse json data from the request body
 
 // Mount your routes
 app.use('/api/auth', authRoutes);
-
+app.use('/api/books',bookRoutes)
+app.use('/api/orders', orderRoutes);
+app.use('/api/ai', aiRoutes);
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => { // Starts the server
