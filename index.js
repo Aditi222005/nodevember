@@ -17,6 +17,10 @@ app.use('/api/auth', authRoutes);
 app.use('/api/books',bookRoutes)
 app.use('/api/orders', orderRoutes);
 app.use('/api/ai', aiRoutes);
+// This route handler will respond to GET requests at the root URL
+app.get('/', (req, res) => {
+  res.send('deployment successful');
+});
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => { // Starts the server
